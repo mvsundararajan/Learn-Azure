@@ -2,12 +2,14 @@
 name: Hello World Workflow
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   hello:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Say Hello
+      - name: Say My First GitHub Actions Workflow is successfully running
         run: echo "Hello World! My first GitHub Actions workflow is running."
