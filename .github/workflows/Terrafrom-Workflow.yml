@@ -1,5 +1,4 @@
 name:Deply Azure Prod
-
 on:
   workflow_dispatch:
 
