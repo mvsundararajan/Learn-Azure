@@ -1,6 +1,15 @@
-name: Deply Azure Prod
+name: simple test workflow
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
 
-
+jobs:
+   run-hello-world:
+      runs-on: ubuntu-latest
+      steps:
+          - name: Checkout repo content
+            uses: actions/checkout@v4
+          - name: run hello world
+            run: python code/hello_world.py
