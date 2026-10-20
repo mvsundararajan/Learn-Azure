@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  hello:
+  hello inrathu disaplay name so I'm little confused:
     runs-on: ubuntu-latest
 
     steps:
