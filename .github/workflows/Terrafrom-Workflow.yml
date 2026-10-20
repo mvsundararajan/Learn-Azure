@@ -1,4 +1,5 @@
-name:Deply Azure Prod
+name: Deply Azure Prod
+
 on:
   workflow_dispatch:
 
