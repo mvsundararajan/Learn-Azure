@@ -1,17 +1,13 @@
-name: simple test workflow
+
+name: Hello World Workflow
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
-  
-  run-python:
+  hello:
     runs-on: ubuntu-latest
-    steps:
-      - name: Download repository code
-        uses: actions/checkout@v4
 
-      - name: Run script
-        run: python code/hello_world.py
+    steps:
+      - name: Say Hello
+        run: echo "Hello World! My first GitHub Actions workflow is running."
