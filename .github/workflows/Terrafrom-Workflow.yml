@@ -6,10 +6,18 @@ on:
       - main
 
 jobs:
-   run-hello-world:
-      runs-on: ubuntu-latest
-      steps:
-          - name: Checkout repo content
-            uses: actions/checkout@v4
-          - name: run hello world
-            run: python code/hello_world.py
+   
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      # MUST HAVE THIS STEP:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run python script
+        run: python code/hello_world.py
