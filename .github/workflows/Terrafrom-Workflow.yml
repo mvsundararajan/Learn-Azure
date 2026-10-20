@@ -6,18 +6,12 @@ on:
       - main
 
 jobs:
-   
-  run-script:
+  
+  run-python:
     runs-on: ubuntu-latest
     steps:
-      # MUST HAVE THIS STEP:
-      - name: Checkout repository code
+      - name: Download repository code
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
-
-      - name: Run python script
+      - name: Run script
         run: python code/hello_world.py
